@@ -56,12 +56,11 @@
     --p-vol-track:rgba(255,255,255,.12);
   }
   .bg-circle{opacity:.09!important}.bg-line{opacity:.11!important}
-  body::before{background:linear-gradient(135deg,rgba(10,9,8,0.85) 0%,rgba(10,9,8,0.95) 100%), var(--grain);}
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:url('https://api.paugram.com/bing') center/cover fixed, var(--bg);color:var(--fg);font-family:'Space Mono',monospace;min-height:100vh;overflow-x:hidden;position:relative;}
-body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg,rgba(245,242,236,0.85) 0%,rgba(245,242,236,0.95) 100%), var(--grain);opacity:var(--noise);pointer-events:none;z-index:9999;}
+body{background:var(--bg);color:var(--fg);font-family:'Space Mono',monospace;min-height:100vh;overflow-x:hidden;position:relative;}
+body::before{content:'';position:fixed;inset:0;background-image:var(--grain);opacity:var(--noise);pointer-events:none;z-index:9999;}
 .bg-els{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .bg-circle{position:absolute;border-radius:50%;background:var(--acc);opacity:.06;will-change:transform;transition:transform .1s ease-out}
 .bg-c1{width:700px;height:700px;top:-200px;right:-150px;animation:drift1 18s ease-in-out infinite}
@@ -894,7 +893,7 @@ body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg
 
 <script>
 const SITES=[
-  {name:"Blog",desc:"个人博客",url:"http://blog.8866520.xyz",icon:"✦",live:true},
+  {name:"Blog",desc:"个人博客，记录技术折腾与随想",url:"http://blog.8866520.xyz",icon:"✦",live:true},
   {name:"假照编辑器",desc:"在线图片编辑工具站",url:"https://jz.8866520.xyz",icon:"✦",live:true},
   {name:"人生已完成清单",desc:"记录人生完成的任务",url:"https://qd.8866520.xyz",icon:"✦",live:true},
   {name:"性别检测",desc:"一键检测父母的性别",url:"https://xbjc.8866520.xyz",icon:"✦",live:true},
